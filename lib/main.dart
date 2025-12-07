@@ -47,27 +47,33 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       drawer: const AppDrawer(), // <-- this creates the hamburger
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
+  child: Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      const Text(
+        'This is Page One',
+        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+      const SizedBox(height: 20),
+
+      // IMAGE FROM ASSETS
+      Image.asset(
+        'assets/sample.jpg',
+        width: 200,
       ),
-    );
-  }
-}
+
+      const SizedBox(height: 20),
+
+      const Text(
+        'You have pushed the button this many times:',
+      ),
+      Text(
+        '$_counter',
+        style: Theme.of(context).textTheme.headlineMedium,
+      ),
+    ],
+  ),
+),
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
